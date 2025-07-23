@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans&display=swap');
+
+:root {
+  --primary-color: #696969;
+  --bg-color: #D3D3D3;
+  --secondary-color: #faeee7;
+  --headline: #33272a;
+  --montserrat: 'Montserrat', sans-serif;
+  --open-sans: 'Open Sans', sans-serif;
+  --title: 'Luxurious Script', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+html {
+  font-size: 62.5%;
+  background-color: var(--bg-color);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column wrap;
+}
+
+
+.container {
+  display: flex;
+  flex-flow: column wrap;
+  width: 64rem;
+  height: 80vh;
+  margin: 0 auto;
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border: solid var(--primary-color);
+}
+
+/* rgb(102, 153, 161)  rgb(0, 75, 90) */
+
+.title {
+  background-color: var(--bg-color);
+  text-align: center;
+  color: var(--headline);
+  font-size: 7rem;
+  font-weight: 400;
+  font-family: var(--title);
+  width: 64rem;
+  border: solid var(--primary-color);
+}
+
+.inputs {
+  display: flex;
+  height: 10rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.input-tarefa,
+.btn-tarefa {
+  font-family: var(--montserrat);
+  font-weight: 500;
+  height: 6rem;
+  border: 0.2rem solid var(--primary-color);
+}
+
+.input-tarefa {
+  font-size: 1.7rem;
+  padding: 2rem;
+  width: 60%;
+  border-radius: 3rem 0 0 3rem;
+}
+
+.btn-tarefa {
+  background-color: #A7C5CD;
+  width: 22%;
+  border-radius: 0 3rem 3rem 0;
+}
+
+.input-tarefa:focus {
+  border: 0.2rem solid #000000;
+  transition: 0.5s;
+}
+
+.tarefas {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.tarefas li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.8rem;
+  font-family: var(--open-sans);
+  font-weight: 500;
+  padding: 0 0 2rem 0;
+  list-style: none;
+}
+
+.apagar {
+  height: 2.3rem;
+  width: 2.3rem;
+  text-align: center;
+  background-color: rgb(255, 0, 0);
+  order: 1;
+}
+
+.verificado {
+  height: 2.3rem;
+  width: 2.3rem;
+}
+
+.botoes {
+  display: flex;
+  gap: 0.9rem;
+}
+
+.concluido {
+  text-decoration: line-through 2px red;
+  transition: ease-in-out 0.8s;
+}
